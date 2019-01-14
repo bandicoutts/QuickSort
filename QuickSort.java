@@ -22,7 +22,7 @@ class QuickSort {
 		return System.nanoTime();
 	}
 
-	static int partition(int arrayOfIntegers[], int start, int end){
+	private static int partition(int arrayOfIntegers[], int start, int end){
 		/* Partition will select the value stored in the last index in arrayOfIntegers,
 		then iterate through arrayOfIntegers. If the value stored at index i in array arrayOfIntegers is equal
 		to or bigger than the value stored in pivot (the value at the last index), it will move the smaller value
@@ -42,7 +42,7 @@ class QuickSort {
 		return pIndex;
 	}
 
-	static void sort(int arrayOfIntegers[], int start, int end){
+	private static void sort(int arrayOfIntegers[], int start, int end){
 		/* If the start value is smaller than the end value (i.e. if there's anything in the array)
 		then it will send the array up to partition to do it's magic. partition then returns a value which
 		is used in sort to call partition again which splits the array into a smaller piece around a new pivot.
@@ -56,14 +56,14 @@ class QuickSort {
 		}
 	}
 
-	static void swap(int arrayOfIntegers[], int i, int j) {
+	private static void swap(int arrayOfIntegers[], int i, int j) {
 		int temp = arrayOfIntegers[i];
 		arrayOfIntegers[i] = arrayOfIntegers[j];
 		arrayOfIntegers[j] = temp;
 	}
 
 
-	static void printArray(int arrayOfIntegers[]){
+	private static void printArray(int arrayOfIntegers[]){
 		int lengthOfArray = arrayOfIntegers.length;
 		System.out.print("[");
 		for (int i = 0; i < lengthOfArray - 1; i++){
